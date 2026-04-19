@@ -1,0 +1,15 @@
+version: "3"
+services:
+  edge-tts:
+    image: travisvn/openai-edge-tts:latest
+    container_name: edge-tts
+    restart: always
+    ports:
+      - "5050:5050"
+    environment:
+      - PORT=5050
+      - API_KEY=
+      - REQUIRE_API_KEY=False
+      - DEFAULT_VOICE=zh-CN-XiaoxiaoNeural
+      - DEFAULT_RESPONSE_FORMAT=mp3
+      - DEFAULT_SPEED=1.0
