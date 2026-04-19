@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: edge-tts
+    runtime: docker
+    plan: free
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: API_KEY
+        value: ""
+      - key: REQUIRE_API_KEY
+        value: "False"
